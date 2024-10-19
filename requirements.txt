@@ -3,3 +3,7 @@ numpy
 matplotlib
 seaborn
 plotly
+geopandas
+logging
+pycountry
+scikit-learn
