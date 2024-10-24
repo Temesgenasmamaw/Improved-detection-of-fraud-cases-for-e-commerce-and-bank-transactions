@@ -157,14 +157,7 @@ class ModelBuilding:
                 "model": LogisticRegression(solver="liblinear", multi_class="auto"),
                 "params": {"C": [1, 5, 10]},
             },
-            "svm": {
-                "model": SVC(),
-                "params": {
-                    "C": [1, 5, 10, 20, 40, 50, 60, 100],
-                    "kernel": ["rbf", "linear"],
-                    "gamma": ["scale", "auto"],
-                },
-            },
+        
             "random_forest": {
                 "model": RandomForestClassifier(),
                 "params": {"n_estimators": [1, 5, 10, 40]},
@@ -209,5 +202,3 @@ class ModelBuilding:
             )
 
         return pd.DataFrame(scores, columns=["model", "best_score", "best_params"])
-
-    # find_best_model_using_gridsearchcv(X_train_scaled, Y_train)
