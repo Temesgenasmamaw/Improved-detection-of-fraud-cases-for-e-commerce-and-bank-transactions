@@ -18,4 +18,4 @@ class GeolocationDataPreprocessing:
         try:
             return struct.unpack("!I", socket.inet_aton(ip))[0]
         except socket.error:
-            return None  # Handle invalid IPs gracefully
+            return None
